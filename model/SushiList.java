@@ -12,6 +12,10 @@ public class SushiList {
         this.sushiList = new HashMap<>();
     }
 
+    public Map<Sushi, Boolean> getSushiList() {
+        return sushiList;
+    }
+
     public void addSushi(Sushi sushi) {
         if(sushi.outOfStock()) {
             System.out.println("在庫がありません");
@@ -20,5 +24,13 @@ public class SushiList {
         sushiList.put(sushi, !sushi.outOfStock());
     }
 
+    public void removeSushi(Sushi sushi) {
+        if(sushiList.containsKey(sushi)) {
+            sushiList.remove(sushi);
+        } else {
+            System.out.println("その寿司は存在しません");
+        }
+    }
+    
 
 }

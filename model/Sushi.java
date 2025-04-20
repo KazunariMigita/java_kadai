@@ -38,11 +38,12 @@ public class Sushi {
         }
         return false;
     }
+
     
     public void reduceStock(int quantity) {
         stock -= quantity;
     }
-    
+
     @Override
     public String toString() {
         return "Sushi{" +
